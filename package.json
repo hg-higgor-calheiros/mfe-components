@@ -1,0 +1,31 @@
+{
+    "name": "mfe-components",
+    "version": "1.0.0",
+    "private":"true",
+    "keywords": [],
+    "author": "Higgor Calheiros",
+    "license": "ISC",
+    "description": "Basic MFE example with shell and remotes",
+    "scripts": {
+        "dev": "run-p marketing auth products shell",
+        "shell": "cd shell && npm start",
+        "auth": "cd auth && npm run start:live",
+        "marketing": "cd marketing && npm start",
+        "products": "cd products && npm start"
+      },
+    "dependencies": {
+        "npm-run-all": "^4.1.5"
+    },
+    "workspaces": [
+        "auth",
+        "marketing",
+        "products",
+        "shell"
+    ],
+    "overrides": {
+        "webpack": "5.96.1"
+    },
+    "resolutions": {
+        "webpack": "5.96.1"
+  }
+}
